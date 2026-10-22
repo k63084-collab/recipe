@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美食探索地圖｜尋找生活中的好味道</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Microsoft JhengHei", Arial, sans-serif;
+            background: #fffaf5;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        header {
+            background: #9c3d26;
+            color: white;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header h1 {
+            font-size: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #ffe0a8;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 85px 20px;
+            background: linear-gradient(135deg, #ffe1c4, #fff4e5);
+        }
+
+        .hero h2 {
+            font-size: 40px;
+            color: #8c3521;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #9c3d26;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: #702918;
+        }
+
+        .section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 55px 20px;
+        }
+
+        .section h2 {
+            text-align: center;
+            color: #8c3521;
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .intro {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px #00000012;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .food-picture {
+            height: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 75px;
+            background: #fbe6d4;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card h3 {
+            color: #8c3521;
+            font-size: 21px;
+            margin-bottom: 8px;
+        }
+
+        .price {
+            color: #c05b32;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .about {
+            background: #f8e9dc;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        .about h2 {
+            color: #8c3521;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background: #54291f;
+            color: white;
+            text-align: center;
+            padding: 22px 15px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                justify-content: center;
+                gap: 10px;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                margin: 0 8px;
+                font-size: 14px;
+            }
+
+            .hero h2 {
+                font-size: 30px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 35px 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🍜 美食探索地圖</h1>
+        <nav>
+            <a href="#home">首頁</a>
+            <a href="#foods">美食推薦</a>
+            <a href="#about">關於我們</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h2>探索美食，享受生活</h2>
+        <p>發現巷弄裡的好味道，讓每一餐都充滿驚喜！</p>
+        <a class="btn" href="#foods">開始探索美食</a>
+    </section>
+
+    <section class="section" id="foods">
+        <h2>人氣美食推薦</h2>
+        <p class="intro">精選三種人氣美食，找到你最喜歡的味道。</p>
+
+        <div class="cards">
+
+            <article class="card">
+                <div class="food-picture">🍜</div>
+                <div class="card-content">
+                    <h3>台式牛肉麵</h3>
+                    <p>香濃湯頭搭配軟嫩牛肉，是台灣經典的美食代表。</p>
+                    <p class="price">參考價格：NT$180</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="food-picture">🍱</div>
+                <div class="card-content">
+                    <h3>日式精緻料理</h3>
+                    <p>豐富食材搭配細膩擺盤，享受簡單又美好的用餐時光。</p>
+                    <p class="price">參考價格：NT$250</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="food-picture">🧋</div>
+                <div class="card-content">
+                    <h3>台灣珍珠奶茶</h3>
+                    <p>香醇奶茶搭配Q彈珍珠，是逛街、旅行必備的飲品。</p>
+                    <p class="price">參考價格：NT$65</p>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2>關於美食探索地圖</h2>
+        <p>我們喜歡美食、旅行與生活，透過簡單的網站分享好吃、好玩、值得探索的事物。</p>
+        <p>希望每個人都能找到屬於自己的美食小天地！</p>
+    </section>
+
+    <footer>
+        <p>© 2026 美食探索地圖 | AI 網站設計練習</p>
+        <p>用美食認識世界，讓生活更加精彩。</p>
+    </footer>
+
+</body>
+</html>
